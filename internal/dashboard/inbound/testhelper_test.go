@@ -26,7 +26,7 @@ func newBrokenRenderer(t *testing.T) *httpserver.Renderer {
 			Data: []byte(`{{define "title"}}t{{end}}{{define "content"}}c{{end}}`),
 		},
 	}
-	r, err := httpserver.NewRenderer(fsys, dashboard.TemplateConfig)
+	r, err := httpserver.NewRenderer(fsys, dashboard.RendererConfig)
 	if err != nil {
 		t.Fatalf("create broken renderer: %v", err)
 	}
@@ -49,7 +49,7 @@ func newTestRenderer(t *testing.T) *httpserver.Renderer {
 			Data: []byte(`{{define "title"}}Dashboard{{end}}{{define "content"}}<h1>Dashboard</h1><p>version={{.Version}}</p>{{end}}`),
 		},
 	}
-	r, err := httpserver.NewRenderer(fsys, dashboard.TemplateConfig)
+	r, err := httpserver.NewRenderer(fsys, dashboard.RendererConfig)
 	if err != nil {
 		t.Fatalf("create test renderer: %v", err)
 	}

@@ -8,7 +8,7 @@
         "FORGE_DIR": "/Users/andygeiss/Documents/github.com/loopforge-ai/forge",
         "FORGE_JUDGE_MODEL": "opus",
         "FORGE_LLM_API_KEY": "",
-        "FORGE_LLM_MODEL": "qwen/qwen3-coder-30b",
+        "FORGE_LLM_MODEL": "qwen/qwen3.5-35b-a3b",
         "FORGE_LLM_URL": "http://localhost:1234/v1/chat/completions"
       }
     }

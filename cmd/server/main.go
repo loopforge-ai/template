@@ -24,7 +24,7 @@ func main() {
 	addr := env.Get("SERVER_ADDR", httpserver.DefaultAddr)
 
 	// Domain services.
-	renderer, err := httpserver.NewRenderer(web.FS, dashboard.TemplateConfig)
+	renderer, err := httpserver.NewRenderer(web.FS, dashboard.RendererConfig)
 	if err != nil {
 		log.Fatalf("create renderer: %v", err)
 	}

@@ -10,8 +10,8 @@ type PageData struct {
 	Version string
 }
 
-// TemplateConfig is the RendererConfig for the template server templates.
-var TemplateConfig = httpserver.RendererConfig{
+// RendererConfig is the configuration for the dashboard server templates.
+var RendererConfig = httpserver.RendererConfig{
 	CommonFiles: []string{
 		"templates/layouts/base.html",
 		"templates/partials/footer.html",

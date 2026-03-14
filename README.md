@@ -1,6 +1,6 @@
-# <!-- TODO: project-name -->
+# <!-- TODO(bootstrap): project-name -->
 
-<!-- TODO: one-line project description -->
+<!-- TODO(developer): one-line project description -->
 
 ## Quick Start
 
@@ -12,7 +12,7 @@ mkdir -p cmd/<app> internal/<context>/domain internal/<context>/inbound internal
 ```
 
 1. Update `.mcp.json` with your local paths.
-2. Fill in all `<!-- TODO -->` placeholders in `CLAUDE.md` and `README.md`.
+2. Fill in all `<!-- TODO(developer) -->` placeholders in `CLAUDE.md` and `README.md`.
 3. Run the first build and test cycle: `go test ./... && golangci-lint run ./...`
 
 ## What's Included
@@ -34,7 +34,7 @@ This project follows **hexagonal architecture** (ports & adapters):
 
 Shared utilities come from [loopforge-ai/utils](https://github.com/loopforge-ai/utils). No external dependencies beyond the standard library and `github.com/loopforge-ai` modules.
 
-<!-- TODO: describe project-specific bounded contexts and their dependency directions -->
+<!-- TODO(developer): describe project-specific bounded contexts and their dependency directions -->
 
 ## Build & Test
 
@@ -42,7 +42,7 @@ Shared utilities come from [loopforge-ai/utils](https://github.com/loopforge-ai/
 go test ./...                          # unit tests only
 go test ./... -tags=integration        # include integration tests
 golangci-lint run ./...                # lint (must pass with 0 issues)
-# <!-- TODO: add go run ./cmd/... for project binary -->
+# <!-- TODO(developer): add go run ./cmd/... for project binary -->
 ```
 
 ## Technology Stack
@@ -58,7 +58,7 @@ golangci-lint run ./...                # lint (must pass with 0 issues)
 
 ## Project Structure
 
-<!-- TODO: update after scaffolding -->
+<!-- TODO(bootstrap): update after scaffolding -->
 ```
 <project>/
 ├── cmd/<app>/          # Entry point
@@ -79,4 +79,4 @@ golangci-lint run ./...                # lint (must pass with 0 issues)
 
 ## License
 
-<!-- TODO: add license -->
+<!-- TODO(developer): add license -->

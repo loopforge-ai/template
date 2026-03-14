@@ -8,7 +8,7 @@ Instructions for AI agents working in this repository.
 go test ./...                          # unit tests only
 go test ./... -tags=integration        # include integration tests
 golangci-lint run ./...                # lint (must pass with 0 issues)
-# <!-- TODO: add go run ./cmd/... for project binary -->
+# <!-- TODO(developer): add go run ./cmd/... for project binary -->
 ```
 
 Every change must pass `golangci-lint run ./...` with zero issues before it is considered complete. Do not modify `.golangci.yml` to suppress lint findings — fix the code instead.
@@ -23,7 +23,7 @@ This project follows hexagonal architecture. Every change must respect these bou
 - **Utils** ([`github.com/loopforge-ai/utils`](https://github.com/loopforge-ai/utils)) is a first-party module with reusable packages: `assert`, `env`, `fs`, `html`, `llm`, `mcp`, `yaml`.
 - **No external dependencies** beyond the standard library and `github.com/loopforge-ai` organization modules.
 
-<!-- TODO: describe project-specific bounded contexts and their one-way dependency directions -->
+<!-- TODO(developer): describe project-specific bounded contexts and their one-way dependency directions -->
 
 ## Coding Conventions
 
@@ -102,16 +102,16 @@ Post-implementation: identify refactoring opportunities, then update `README.md`
 
 ## Project-Specific
 
-<!-- TODO: Ubiquitous Language
+<!-- TODO(developer): Ubiquitous Language
 | Term | Definition |
 |------|------------|
 -->
 
-<!-- TODO: Decisions
+<!-- TODO(developer): Decisions
 | Decision | Rationale |
 |----------|-----------|
 -->
 
-<!-- TODO: Gotchas
+<!-- TODO(developer): Gotchas
 1. **Gotcha** — description and solution
 -->

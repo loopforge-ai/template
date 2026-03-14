@@ -45,3 +45,8 @@ server:
 # Run tests with coverage
 test:
     go test -cover ./...
+
+# Validate template quality contract (lint + test + Docker build)
+validate: lint test
+    docker build -t template:validate .
+    @echo "Template quality contract: PASS"
