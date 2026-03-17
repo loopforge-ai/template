@@ -82,7 +82,17 @@ Key tool workflow: `search_skill` → `generate_skill` (match found) or `define_
 4. Run verification again
 - **GATE**: Verification passes. If not, diagnose and repeat from step 3.
 
-### e) Self-Healing Loop
+### e) Bug-Fix Loop
+
+When the user reports a bug, do **not** jump straight to fixing it. Follow this sequence:
+
+1. Reproduce the bug by writing a failing test that captures the incorrect behavior
+2. Run `go test` — confirm the test FAILS (proving the bug exists)
+3. Launch a subagent to implement the fix
+4. The subagent runs `go test` — expect PASS (proving the fix works)
+- **GATE**: The reproduction test passes. If not, the subagent iterates on the fix. Max 5 iterations before escalating to user.
+
+### f) Self-Healing Loop
 
 1. Run command (build, test, lint)
 2. On error: read output, diagnose root cause
@@ -97,6 +107,8 @@ Key tool workflow: `search_skill` → `generate_skill` (match found) or `define_
 3. **Lint-Fix Loop** — achieve zero lint issues
 4. **Verify-Implement-Verify Loop** — end-to-end verification
 5. On failure at any step → enter **Self-Healing Loop**
+
+6. When the user reports a bug → enter **Bug-Fix Loop** (reproduce first, then fix via subagent)
 
 Post-implementation: identify refactoring opportunities, then update `README.md` and `CLAUDE.md` if behavior changed.
 
